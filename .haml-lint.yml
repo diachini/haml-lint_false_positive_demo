@@ -1,0 +1,15 @@
+inherits_from: .haml-lint_todo.yml
+
+linters:
+  RuboCop:
+    enabled: true
+    # These cops are incredibly noisy when it comes to HAML templates, so we
+    # ignore them.
+    ignored_cops:
+      - Layout/LineLength
+      - Layout/TrailingEmptyLines
+      - Style/FrozenStringLiteralComment
+
+  LineLength:
+    enabled: true
+    max: 30
